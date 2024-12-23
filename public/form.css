@@ -1,11 +1,13 @@
 body {
-  font-family: 'Times New Roman', Times, serif;
+  font-family: 'Arial', sans-serif;
   margin: 0;
   padding: 0;
-  color: #333;
-  background: linear-gradient(to bottom, #1f3c6a,  #090a0f);
-  overflow: auto;
+  color: #e0e0e0; /* Light text color for contrast */
+  background: linear-gradient(to bottom, #1a1a1a, #333333); /* Dark gradient background */
+  overflow-y: auto; /* Allow vertical scrolling */
+  height: 100vh; /* Set height to 100vh to ensure the body takes full height */
 }
+
 @keyframes snowfall {
   0% {
       transform: translateY(-100%);
@@ -28,37 +30,40 @@ body {
 .snowflake {
   position: absolute;
   top: -10px;
-  width: 9px;
-  height: 9px;
-  background: white;
+  width: 10px; /* Slightly smaller snowflakes */
+  height: 10px; /* Slightly smaller snowflakes */
+  background: radial-gradient(circle, rgba(255, 255, 255, 0.9), rgba(255, 255, 255, 0.5));
   border-radius: 50%;
-  opacity: 0.8;
-  animation: snowfall 10s linear infinite;
+  opacity: 0.9;
+  animation: snowfall 10s linear infinite; /* Slower snowfall */
+  filter: blur(1px); /* Added blur for a soft effect */
 }
 
 .container {
-  max-width: 600px;
-  margin: 40px auto;
-  background: rgba(255, 255, 255, 0.8);
-  padding: 20px;
-  border-radius: 12px;
-  box-shadow: 0 8px 16px rgba(0, 0, 0, 0.3);
+  max-width: 800px; /* Increased width for a more spacious layout */
+  margin: 60px auto;
+  background: rgba(50, 50, 50, 0.9); /* Darker container background */
+  padding: 40px;
+  border-radius: 20px; /* More rounded corners */
+  box-shadow: 0 20px 40px rgba(0, 0, 0, 0.5);
+  backdrop-filter: blur(15px); /* Increased backdrop blur for a modern touch */
 }
 
 .header {
   text-align: center;
-  margin-bottom: 20px;
+  margin-bottom: 40px;
 }
 
 .header img {
-  max-width: 100px;
-  margin-bottom: 10px;
+  max-width: 150px; /* Slightly larger logo */
+  margin-bottom: 20px;
 }
 
 .header h2 {
   margin: 0;
   font-family: 'Georgia', serif;
-  color: #2c3e50;
+  color: #f39c12; /* Bright color for header */
+  text-shadow: 1px 1px 3px rgba(0, 0, 0, 0.5); /* Enhanced text shadow */
 }
 
 form {
@@ -67,47 +72,57 @@ form {
 }
 
 label {
-  margin-top: 10px;
+  margin-top: 20px;
   font-weight: bold;
-  color: #555;
+  color: #e0e0e0; /* Light label color */
 }
 
 input, select, textarea {
-  padding: 10px;
-  margin-top: 5px;
-  border: 1px solid #aaa;
-  border-radius: 4px;
-  font-size: 14px;
-  background: #f9f9f9;
+  padding: 14px;
+  margin-top: 8px;
+  border: 1px solid #444; /* Darker border */
+  border-radius: 8px; /* More rounded corners */
+  font-size: 16px;
+  background: #222; /* Dark input background */
+  color: #e0e0e0; /* Light text color */
+  transition: border-color 0.3s, box-shadow 0.3s; /* Added transition for focus */
 }
 
 input:focus, textarea:focus {
-  border-color: #3498db;
+  border-color: #f39c12; /* Highlight border color on focus */
   outline: none;
+  box-shadow: 0 0 8px rgba(243, 156, 18, 0.5); /* Enhanced shadow on focus */
 }
 
 button {
-  margin-top: 20px;
-  background-color: #1f3c6a;
+  margin-top: 30px;
+  background-color: #f39c12; /* Bright button color */
   color: #ffffff;
   border: none;
-  padding: 12px;
-  font-size: 16px;
+  padding: 16px;
+  font-size: 18px; /* Increased font size */
   cursor: pointer;
-  border-radius: 4px;
-  transition: background-color 0.3s;
+  border-radius: 8px; /* More rounded corners */
+  transition: background-color 0.3s, transform 0.2s; /* Added transform effect */
 }
 
 button:hover {
-  background-color:  #090a0f;
+  background-color: #e67e22; /* Darker hover color */
+  transform: scale(1.05); /* Slightly enlarge on hover */
 }
 
 .error {
-  color: red;
-  font-size: 12px;
+  color: #e74c3c; /* Bright error color */
+  font-size: 14px; /* Increased font size */
 }
 
 .checkbox-group {
   display: flex;
   flex-direction: column;
+  margin-top: 15px; /* Added margin for spacing */
+}
+
+/* Additional styles for better aesthetics */
+h2, h3 {
+  margin: 0;
 }
